@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 import Post from "./Post";
-
 import { db, auth } from "./firebase";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
 import ImageUpload from "./ImageUpload";
 import InstagramEmbed from "react-instagram-embed";
-import { Link } from "react-router-dom";
+
 
 function getModalStyle() {
   const top = 50;
@@ -171,7 +170,7 @@ function App() {
         />
 
         {user ? (
-          <Button
+          <Button variant="outline-primary"
             className="app__logoutContainer"
             onClick={() => auth.signOut()}
           >
@@ -200,7 +199,7 @@ function App() {
         </div>
         <div className="app__postsRight">
           <InstagramEmbed
-            url="https://www.instagram.com/sury.a_g/"
+            url="https://www.instagram.com/p/B5F9zQNDHUdQqYrN1Rl-qxDi70FzkTELQorxEQ0/"
             maxWidth={320}
             hideCaption={false}
             containerTagName="div"
